@@ -7,6 +7,7 @@
 #include "Logging/LogMacros.h"
 #include "Gauntlet2Character.generated.h"
 
+class IInteractable;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputAction;
@@ -49,6 +50,14 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Input")
 	UInputAction* MouseLookAction;
 
+	// ===== INTERACT =====
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* InteractAction;
+
+	// ===== PAUSE GAME =====
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* PauseAction;
+
 public:
 
 	/** Constructor */
@@ -58,6 +67,12 @@ protected:
 
 	/** Initialize input action bindings */
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
+
+	UPROPERTY(VisibleAnywhere, Category="Interactable", meta=(AllowPrivateAccess = "true"))
+	TScriptInterface<IInteractable> Interactable;
 
 protected:
 
@@ -84,6 +99,25 @@ public:
 	/** Handles jump pressed inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoJumpEnd();
+
+	/** Handles Interactions */
+	UFUNCTION(BlueprintCallable, Category="Input")
+	virtual void Interact();
+
+	/** Handles Pause Game */
+	UFUNCTION(BlueprintCallable, Category="Input")
+	virtual void PauseGame();
+
+	/** Handles SetInteractable */
+	UFUNCTION(BlueprintCallable, Category="Input")
+	virtual void SetInteractable(TScriptInterface<IInteractable> Value);
+
+	/** Handles SetInteractable */
+	UFUNCTION(BlueprintCallable, Category="Input")
+	virtual TScriptInterface<IInteractable> GetInteractable()
+	{
+		return this->Interactable;
+	}
 
 public:
 

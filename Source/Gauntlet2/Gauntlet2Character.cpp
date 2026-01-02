@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Gauntlet2.h"
+#include "Interfaces/Interactable.h"
 
 AGauntlet2Character::AGauntlet2Character()
 {
@@ -52,6 +53,8 @@ AGauntlet2Character::AGauntlet2Character()
 
 void AGauntlet2Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
 		
@@ -65,11 +68,28 @@ void AGauntlet2Character::SetupPlayerInputComponent(UInputComponent* PlayerInput
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AGauntlet2Character::Look);
+
+		// ===== Interacting =====
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &AGauntlet2Character::Interact);
+
+		// ===== Pause Game =====
+		EnhancedInputComponent->BindAction(PauseAction, ETriggerEvent::Triggered, this, &AGauntlet2Character::Interact);
 	}
 	else
 	{
 		UE_LOG(LogGauntlet2, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
+}
+
+void AGauntlet2Character::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+void AGauntlet2Character::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
 }
 
 void AGauntlet2Character::Move(const FInputActionValue& Value)
@@ -130,4 +150,39 @@ void AGauntlet2Character::DoJumpEnd()
 {
 	// signal the character to stop jumping
 	StopJumping();
+}
+
+void AGauntlet2Character::Interact()
+{
+	UE_LOG(LogTemp, Log, TEXT("Interact called"));
+	if (!IsValid(Interactable.GetObject()))
+	{
+		GEngine->AddOnScreenDebugMessage(
+			-1,
+			2.f,
+			FColor::Blue,
+			TEXT("Nessun interagibile")
+		);
+		return;
+	}
+
+	Interactable.GetInterface()->Interact(this);
+	GEngine->AddOnScreenDebugMessage(
+			-1,
+			2.f,
+			FColor::Blue,
+			TEXT("Interagito con: " + Interactable.GetObject()->GetName())
+		);
+}
+
+void AGauntlet2Character::PauseGame()
+{
+	GetWorld()->GetWorldSettings()->TimeDilation = 0.0f;
+
+	// UnpauseGame è nel WBP_PauseMenuUI
+}
+
+void AGauntlet2Character::SetInteractable(TScriptInterface<IInteractable> Value)
+{
+	this->Interactable = Value;
 }
