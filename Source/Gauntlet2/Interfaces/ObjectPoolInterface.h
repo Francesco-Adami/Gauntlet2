@@ -15,16 +15,7 @@ struct FObjectPoolActivateData
 	FTransform ObjectPoolTransform;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Object Pool Data")
-	FName ObjectPoolID;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Object Pool Data")
-	FString ObjectPoolName;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Object Pool Data")
-	FText ObjectPoolText;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Object Pool Data")
-	FVector ObjectPoolVector;
+	FVector ProjectileDir;
 	
 };
 

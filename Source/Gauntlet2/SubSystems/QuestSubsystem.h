@@ -6,6 +6,8 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "QuestSubsystem.generated.h"
 
+class UQuestVisualData;
+
 USTRUCT(BlueprintType)
 struct FQuestDetailsRow : public FTableRowBase
 {
@@ -14,24 +16,9 @@ struct FQuestDetailsRow : public FTableRowBase
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FName QuestTitle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FText QuestDescription;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	TSoftObjectPtr<AActor> ObjectiveTarget;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	int32 RequiredItems;
-
-	// ------------------------------------------------------
-	// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Visuals")
-	// TSoftObjectPtr<class UNiagaraSystem> VictoryVFX;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio")
-	TSoftObjectPtr<class USoundBase> VictorySound;
-
+	// Invece di avere i VFX qui, puntiamo al DataAsset che li contiene
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Data")
-	TSoftObjectPtr<class UPrimaryDataAsset> QuestRewardData;
+	TSoftObjectPtr<UQuestVisualData> QuestAssets;
 };
 
 /**
@@ -45,8 +32,14 @@ class GAUNTLET2_API UQuestSubsystem : public UGameInstanceSubsystem
 protected:
 	UPROPERTY()
 	UDataTable* QuestTable;
+	
+	FName CurrentQuestName;
+	
+	void TryStartNextQuest();
 
-public:
+public:	
 	UFUNCTION(BlueprintCallable)
-	void StartQuest(FName QuestName);
+	void CompleteQuest(FName QuestName);
+	
+	void OnQuestAssetsLoaded(TSoftObjectPtr<UQuestVisualData> LoadedAssetPtr);
 };

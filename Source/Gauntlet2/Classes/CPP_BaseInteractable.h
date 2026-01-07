@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Interfaces/Interactable.h"
+#include "Interfaces/Activatable.h"
 #include "CPP_BaseInteractable.generated.h"
 
 UCLASS()
@@ -36,6 +37,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	UMaterialInstanceDynamic* MaterialInstance;
+	
+	UPROPERTY(EditInstanceOnly, Category = "Interaction")
+	TArray<TScriptInterface<IActivatable>> Activatables;
 
 	// Update Material Instance Color
 	UFUNCTION(BlueprintCallable)

@@ -73,6 +73,8 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category="Interactable", meta=(AllowPrivateAccess = "true"))
 	TScriptInterface<IInteractable> Interactable;
+	
+	bool bHasArtifact = false;
 
 protected:
 
@@ -118,6 +120,9 @@ public:
 	{
 		return this->Interactable;
 	}
+	
+	virtual void CollectArtifact() { bHasArtifact = true; GEngine->AddOnScreenDebugMessage(-1, 4.0f, FColor::Green, TEXT("Collect Artifact !!")); }
+	virtual bool HasArtifact() { return bHasArtifact; }
 
 public:
 

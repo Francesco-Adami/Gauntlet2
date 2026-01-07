@@ -4,6 +4,7 @@
 #include "CPP_BaseInteractable.h"
 
 #include "Gauntlet2Character.h"
+#include "Interfaces/Activatable.h"
 
 // Sets default values
 ACPP_BaseInteractable::ACPP_BaseInteractable()
@@ -45,7 +46,7 @@ void ACPP_BaseInteractable::NativeInteract(AActor* Interactor)
 		-1,
 		2.0f,
 		FColor::Red,
-		TEXT("LEVER - Interacted")
+		TEXT("Interacted")
 	);
 
 	IsActivated = !IsActivated;

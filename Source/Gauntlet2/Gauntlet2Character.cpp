@@ -168,11 +168,11 @@ void AGauntlet2Character::Interact()
 
 	Interactable.GetInterface()->Interact(this);
 	GEngine->AddOnScreenDebugMessage(
-			-1,
-			2.f,
-			FColor::Blue,
-			TEXT("Interagito con: " + Interactable.GetObject()->GetName())
-		);
+		-1,
+		2.f,
+		FColor::Blue,
+		TEXT("Interagito con: " + Interactable.GetObject()->GetName())
+	);
 }
 
 void AGauntlet2Character::PauseGame()

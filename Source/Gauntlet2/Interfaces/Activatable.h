@@ -36,4 +36,6 @@ public:
 	// activate to implement in blueprint
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Activatable")
 	void BP_Activate(AActor* Interactor);
+	
+	bool IsActive;
 };
