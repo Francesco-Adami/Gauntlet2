@@ -8,6 +8,8 @@
 
 class UQuestVisualData;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnQuestCompletedSignature, FName, QuestName, UQuestVisualData*, LoadedVisuals);
+
 USTRUCT(BlueprintType)
 struct FQuestDetailsRow : public FTableRowBase
 {
@@ -16,7 +18,6 @@ struct FQuestDetailsRow : public FTableRowBase
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FName QuestTitle;
 
-	// Invece di avere i VFX qui, puntiamo al DataAsset che li contiene
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Data")
 	TSoftObjectPtr<UQuestVisualData> QuestAssets;
 };
@@ -29,17 +30,27 @@ class GAUNTLET2_API UQuestSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 
-protected:
-	UPROPERTY()
+protected:	
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+	
+	int CurrentQuestIndex;
+	FName QuestTitle;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Data")
 	UDataTable* QuestTable;
 	
 	FName CurrentQuestName;
-	
-	void TryStartNextQuest();
+	TSharedPtr<struct FStreamableHandle> CurrentLoadHandle;
 
 public:	
 	UFUNCTION(BlueprintCallable)
-	void CompleteQuest(FName QuestName);
+	void CompleteQuest();
 	
-	void OnQuestAssetsLoaded(TSoftObjectPtr<UQuestVisualData> LoadedAssetPtr);
+	UPROPERTY(BlueprintAssignable, Category = "Quest System")
+	FOnQuestCompletedSignature OnQuestCompletedDelegate;
+	
+	void OnQuestAssetsLoaded(FName QuestName, TSoftObjectPtr<UQuestVisualData> AssetPtr);
+	
+	void GetNextQuestName();
+	void SetCurrentQuestIndex(int Index) { CurrentQuestIndex = Index; }
 };

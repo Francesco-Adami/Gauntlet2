@@ -5,62 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b2d73ee-2cd3-49f5-ab2d-2df42d3d3ee5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gauntlet2.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gauntlet2.dir/.idea/dictionaries/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gauntlet2.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Fall_Loop.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Fall_Loop.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/Interactables/BP_Lever.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Core/BP_GauntletCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Core/BP_GauntletCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/BFL_Gauntlet2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/BFL_Gauntlet2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Bullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Bullet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Turret.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Turret.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Core/HUD_Gauntlet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Core/HUD_Gauntlet.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Data/QuestDataTable.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Data/QuestDataTable.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/0/0B/8J7KP9A44H0820Z2FEJ02J.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/0/3K/09SMW1V88S5GFBFB77GB1X.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/0/AW/BFF7Z8JVXUTDTUUOSUZ7LY.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/0/OV/BGG3JZNGKL90JOQWKW3TPN.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/0/WP/CG3ZOOKO87RD56BCD8XDUO.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/1/T7/BAUW1EIH8B6HYV66PPJR6V.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/1/VG/8LJOXEYIZ0XP7NIYDKR3IE.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/2/4W/PNZ8B3A0QF0EUV72V1R47N.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/2/76/F0LNRG7R1L4RDE5DIZOT59.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/2/7R/7BAWZRN0LBAH2U5NGYQX5F.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/2/G0/8I6NC6IV59GQJOVBNSKAJB.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/3/B3/QM8BI9634OVAR7I0EHMAHH.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/4/UH/QL4NUSRRJ8UKH5E0ZB39K1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/5/CD/GNOXEWGD0CPGP5PJZBXVR8.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/5/CO/0LFUI76M2S0L49ZUL3GJM7.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/5/ZV/517I5Q5Y5S9X7Q9C1UJX4J.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/6/K7/KGMDTIN7T2AL6L84WDR4SW.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/7/5O/ZWDA0G8WZF0T2LWCH4UNOT.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/7/I9/M16YN37LOP412TD451019O.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/7/KD/3B8DJVN1EDSJJH73CCT5ZE.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/7/MP/SUYJ1AFI9NXKJSY9HSTH3V.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/8/SH/YDXWAV831ABADIZDIVHL3N.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/9/LX/AI2YBGDCVX77GI5RK7OBO8.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/9/SK/7XHBKV90G5R3YF29CCTC47.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/A/EA/2J7C0J37BH4SCPQUPIUT0A.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/A/YH/8GKCED3WHV5E5WXUZ2QN28.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/B/VP/4SX4VCASNT2DZVB0PQ1SB8.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/C/5C/6L1W2651H5IJZW8VKICSGG.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/C/DQ/6XJDHE9SJ8ZKOBJ24IJA4B.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/C/OJ/K8L403G8YKHBR0M0G678KI.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/D/CL/LH5PEAQEPRJYO1RXXVSDXF.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/D/IT/95RW1TTTVBO42N9P2RM9Q6.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/E/7Y/DNPWC04OHZAUJVNAG2C0Q0.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/E/N8/O7N813JAK8F0K4NQS860JO.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/E/P9/F3NCES0W3UN0IVTU1JM6DS.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/E/PF/QM31J5FM21OBF4DZQJPE9L.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/E/WW/S5S5GGV4SDDFBH77KKTUV5.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/Gauntlet2/Lvl_GauntletGame/F/1K/3BK8V6UW8KWXJC42WB3CJ0.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/0U/Q6VHOBG6ZGSP4I77QLGV1A.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/HY/Q7CPP7VHOXBAMAJI90W626.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/HY/Q7CPP7VHOXBAMAJI90W626.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/UI/WBP_HUDGauntlet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/UI/WBP_HUDGauntlet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/I5/I9IN7FDO5O0WBL19M4S7M8.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/I5/I9IN7FDO5O0WBL19M4S7M8.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gauntlet2.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Gauntlet2.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_BaseInteractable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_BaseInteractable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_BaseInteractable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_BaseInteractable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Gauntlet2Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Gauntlet2Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Gauntlet2Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Gauntlet2Character.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Interfaces/Activatable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Interfaces/Activatable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Interfaces/ObjectPoolInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Interfaces/ObjectPoolInterface.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.h" afterDir="false" />
     </list>
@@ -76,10 +35,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/UObject/ScriptDelegates.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/Engine/AssetManager.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Gauntlet2/DevSettings/DevSettings.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Gauntlet2/SubSystems/Data/QuestVisualData.h" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -184,12 +146,14 @@
       <updated>1767793676220</updated>
       <workItem from="1767793686532" duration="5679000" />
       <workItem from="1767820215972" duration="1605000" />
+      <workItem from="1767869071375" duration="10555000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

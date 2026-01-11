@@ -121,6 +121,9 @@ public:
 		return this->Interactable;
 	}
 	
+	UFUNCTION(BlueprintImplementableEvent)
+	void Respawn();
+	
 	virtual void CollectArtifact() { bHasArtifact = true; GEngine->AddOnScreenDebugMessage(-1, 4.0f, FColor::Green, TEXT("Collect Artifact !!")); }
 	virtual bool HasArtifact() { return bHasArtifact; }
 

@@ -16,7 +16,4 @@ class GAUNTLET2_API UQuestVisualData : public UPrimaryDataAsset
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio")
 	TSoftObjectPtr<USoundBase> VictorySound;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio")
-	bool IsLastQuest = false;
 };

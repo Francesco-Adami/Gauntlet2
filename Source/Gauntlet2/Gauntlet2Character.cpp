@@ -12,6 +12,7 @@
 #include "InputActionValue.h"
 #include "Gauntlet2.h"
 #include "Interfaces/Interactable.h"
+#include "SubSystems/QuestSubsystem.h"
 
 AGauntlet2Character::AGauntlet2Character()
 {
@@ -90,6 +91,17 @@ void AGauntlet2Character::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
+	if (GetActorLocation().Z < -200.0f)
+	{
+		if (!HasArtifact())
+		{
+			SetActorLocation(FVector::ZeroVector);
+		}
+		else
+		{
+			Respawn();
+		}
+	}
 }
 
 void AGauntlet2Character::Move(const FInputActionValue& Value)
@@ -166,7 +178,7 @@ void AGauntlet2Character::Interact()
 		return;
 	}
 
-	Interactable.GetInterface()->Interact(this);
+	Interactable->Interact(this);
 	GEngine->AddOnScreenDebugMessage(
 		-1,
 		2.f,

@@ -3,57 +3,82 @@
 
 #include "SubSystems/QuestSubsystem.h"
 #include "Data/QuestVisualData.h"
+#include "DevSettings/DevSettings.h"
 #include "Engine/AssetManager.h"
 #include "Engine/StreamableManager.h"
-#include "Kismet/GameplayStatics.h"
 
-void UQuestSubsystem::TryStartNextQuest()
+void UQuestSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
-	TArray<FName> Names = QuestTable->GetRowNames();
+	Super::Initialize(Collection);
 	
-	if (Names.IsEmpty()) return;
-	
-	int i = 0;
-	if (Names.Contains(CurrentQuestName))
+	const UDevSettings* Settings = GetDefault<UDevSettings>();
+    
+	if (Settings && Settings->QuestDataTable.ToSoftObjectPath().IsValid())
 	{
-		i = Names.IndexOfByKey(CurrentQuestName);
-		CurrentQuestName = Names[i + 1];
-	}
-}
-
-void UQuestSubsystem::CompleteQuest(FName QuestName)
-{
-	// Trova la riga nella DataTable
-	static const FString ContextString(TEXT("QuestContext"));
-	FQuestDetailsRow* Row = QuestTable->FindRow<FQuestDetailsRow>(QuestName, ContextString);
-
-	if (Row && !Row->QuestAssets.IsNull())
-	{
-		// Ottieni il Path del DataAsset tramite il Soft Pointer
-		FSoftObjectPath AssetPath = Row->QuestAssets.ToSoftObjectPath();
-
-		// Richiedi il caricamento asincrono
-		FStreamableManager& Streamable = UAssetManager::Get().GetStreamableManager();
-        
-		Streamable.RequestAsyncLoad(AssetPath, FStreamableDelegate::CreateUObject(this, &UQuestSubsystem::OnQuestAssetsLoaded, Row->QuestAssets));
+		QuestTable = Settings->QuestDataTable.LoadSynchronous();
 	}
 	
-	TryStartNextQuest();
+	CurrentQuestIndex = -1;
 }
 
-// Funzione Callback chiamata quando gli asset sono pronti in memoria
-void UQuestSubsystem::OnQuestAssetsLoaded(TSoftObjectPtr<UQuestVisualData> LoadedAssetPtr)
+void UQuestSubsystem::CompleteQuest()
 {
-	UQuestVisualData* Data = LoadedAssetPtr.Get();
-	if (Data)
-	{
-		USoundBase* Sound = Data->VictorySound.LoadSynchronous();
-		if (Sound) UGameplayStatics::PlaySound2D(GetWorld(), Sound);
+	if (!QuestTable) return;
+	
+	GetNextQuestName();
 
-		if (Data->IsLastQuest)
+	// 1. Troviamo la riga nella DataTable
+	static const FString ContextString(TEXT("Quest Lookup"));
+	FQuestDetailsRow* Row = QuestTable->FindRow<FQuestDetailsRow>(QuestTitle, ContextString);
+
+	if (Row)
+	{
+		if (Row->QuestAssets.IsValid())
 		{
-			// Logica per tornare al menu dopo 3 secondi...
-			
+			OnQuestCompletedDelegate.Broadcast(Row->QuestTitle, Row->QuestAssets.Get());
+		}
+		else
+		{
+			if (UAssetManager* Manager = UAssetManager::GetIfInitialized())
+			{
+				// lista di cosa caricare
+				TArray<FSoftObjectPath> AssetsToLoad;
+				AssetsToLoad.Add(Row->QuestAssets.ToSoftObjectPath());
+
+				// caricamento asincrono
+				CurrentLoadHandle = Manager->GetStreamableManager().RequestAsyncLoad(
+					AssetsToLoad, 
+					FStreamableDelegate::CreateUObject(
+					this, 
+					&UQuestSubsystem::OnQuestAssetsLoaded, 
+					Row->QuestTitle, 
+					Row->QuestAssets)
+				);
+			}
 		}
 	}
+}
+
+// Funzione Callback (chiamata quando gli asset sono pronti in memoria)
+void UQuestSubsystem::OnQuestAssetsLoaded(FName QuestName, TSoftObjectPtr<UQuestVisualData> AssetPtr)
+{
+	UQuestVisualData* LoadedData = AssetPtr.Get();
+
+	if (LoadedData)
+	{
+		OnQuestCompletedDelegate.Broadcast(QuestName, LoadedData);
+	}
+    
+	CurrentLoadHandle.Reset();
+}
+
+void UQuestSubsystem::GetNextQuestName()
+{
+	static const FString ContextString(TEXT("Quest Lookup"));
+	TArray<FName> AllQuests = QuestTable->GetRowNames();
+	
+	CurrentQuestIndex += 1;
+	if (CurrentQuestIndex >= AllQuests.Num()) return;
+	
+	QuestTitle = AllQuests[CurrentQuestIndex];
 }

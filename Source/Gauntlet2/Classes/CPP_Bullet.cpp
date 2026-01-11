@@ -54,6 +54,11 @@ void ACPP_Bullet::Move(float DeltaTime)
 				// LaunchCharacter è il metodo migliore per spostare i Character in Unreal
 				// I booleani 'true, true' significano: sovrascrivi la velocità attuale (XY e Z)
 				HitCharacter->LaunchCharacter(FinalForce, true, true);
+				
+				// ritorno il proiettile alla pool
+				FObjectPoolDeactivateData Data;
+				NativeDeactivate(Data);
+				TimeElapsed = 0.0f;
 			}
 		}
 	}
