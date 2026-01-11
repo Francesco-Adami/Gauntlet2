@@ -4,25 +4,7 @@
     <projectFile>Gauntlet2.uproject</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2d73ee-2cd3-49f5-ab2d-2df42d3d3ee5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/BFL_Gauntlet2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/BFL_Gauntlet2.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Bullet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Bullet.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Turret.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Blueprints/BP_Turret.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Core/HUD_Gauntlet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Core/HUD_Gauntlet.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/Data/QuestDataTable.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/Data/QuestDataTable.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gauntlet2/UI/WBP_HUDGauntlet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gauntlet2/UI/WBP_HUDGauntlet.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/I5/I9IN7FDO5O0WBL19M4S7M8.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/I5/I9IN7FDO5O0WBL19M4S7M8.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gauntlet2.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Gauntlet2.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_Artifact.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_BaseInteractable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_BaseInteractable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/Gauntlet2Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/Gauntlet2Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Gauntlet2/SubSystems/QuestSubsystem.h" afterDir="false" />
-    </list>
+    <list default="true" id="2b2d73ee-2cd3-49f5-ab2d-2df42d3d3ee5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,8 +19,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/UObject/ScriptDelegates.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/Engine/AssetManager.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/Gauntlet2/Classes/CPP_NewLever.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/Engine/GameInstance.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Gauntlet2/DevSettings/DevSettings.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Gauntlet2/SubSystems/CPP_GI_Checkpoints.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Gauntlet2/SubSystems/Data/QuestVisualData.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -147,6 +130,7 @@
       <workItem from="1767793686532" duration="5679000" />
       <workItem from="1767820215972" duration="1605000" />
       <workItem from="1767869071375" duration="10555000" />
+      <workItem from="1768144356901" duration="12020000" />
     </task>
     <servers />
   </component>
